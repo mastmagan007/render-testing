@@ -76,6 +76,12 @@ app.use('/courses/:courseId/modules/:moduleId/module-item', courseModuleItem)
 app.use('/courses/:courseId/lectures', lectureRouter)
 app.use('/achievements', achievementsRouter)
 
+if (process.env.NODE_ENV === 'production') {
+  //*Set static folder up in production
+  app.use(express.static('client/public'));
+
+  app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'public','index.html')));
+}
 
 
 const port = process.env.PORT || 4000
