@@ -8,7 +8,7 @@
     "serve": "nodemon index.js",    
     "client": "pnpm start --prefix client",
     "clientinstall": "pnpm install --prefix client",
-    "dev": "concurrently \"pnpm run index\" \"pnpm run client\"",
+    "dev": "concurrently \"pnpm run serve\" \"pnpm run client\"",
     "render-postbuild": "PNPM_CONFIG_PRODUCTION=false pnpm install --prefix client && pnpm run build --prefix client"
   },
   "author": "EslamGenedy",
