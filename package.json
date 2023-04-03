@@ -46,6 +46,7 @@
     "web-push": "^3.4.4"
   },
   "devDependencies": {
+    "concurrently": "^7.3.0",
     "nodemon": "^2.0.6"
   }
 }
